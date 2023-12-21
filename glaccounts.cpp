@@ -61,14 +61,11 @@ void Transaction::insertTableFromCSV (string table ) {
                 ");");
 
         string buffer(sqlBuffer);
-
-        cout << buffer << endl;
-
         txn.exec(buffer);
     }
 
     result r = txn.exec("SELECT account, child, parent_account from gl_accounts;");
-    cout << "Found " << r.size() << " number of accounts.\n";
+    cout << "Truncated and inserted " << r.size() << " general ledger accounts.\n";
     txn.commit();
 }
   
