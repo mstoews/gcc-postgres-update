@@ -75,3 +75,8 @@ void Transaction::trunctateTable (string table ) {
     txn.exec("TRUNCATE TABLE gl_accounts;");
     txn.commit();
 }
+
+void Transaction::updateAndTruncate() {
+    trunctateTable("gl_accounts");
+    insertTableFromCSV("gl_accounts");
+}

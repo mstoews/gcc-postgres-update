@@ -9,6 +9,7 @@ class Transaction {
     public:
         void trunctateTable(string table);
         void insertTableFromCSV(string table);
+        void updateAndTruncate();
     
 };   
 

@@ -2,7 +2,9 @@
 #include <fstream>
 #include <pqxx/pqxx>
 #include <getopt.h>
-#include "glaccounts.h"
+
+#include "./tables/glaccounts.h"
+#include "./tables/gltypes.h"
 
 using namespace std;
 using namespace pqxx;
@@ -14,27 +16,31 @@ int main(int argc, char *argv[]) {
      };
 
         while (1) {
-        const int opt = getopt_long(argc, argv, "tc::", longopts, 0);
+        const int opt = getopt_long(argc, argv, "atc::", longopts, 0);
 
         if (opt == -1) {
             break;
         }
 
         switch (opt) {
-            case 't': {
-                    Transaction t;
+            case 'a': {
+                    Transaction accounts;
                     string table = "gl_accounts";
-                    t.trunctateTable(table);
+                    accounts.trunctateTable(table);
+                    accounts.insertTableFromCSV(table);
+                    break;
+            }
+            case 't': {
+                    GLTypes types;
+                    string table = "gl_account_type";
+                    types.trunctateTypes(table);
+                    types.insertTypesFromCSV(table);
                     break;
             }
             case 'c':
                 break;
         }
     }
-
-    Transaction t;
-    string table = "gl_accounts";    
-    t.insertTableFromCSV(table);
 }
 
 

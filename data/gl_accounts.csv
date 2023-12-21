@@ -1,3 +1,49 @@
-1000,1001,true,Assets,Cash,Parent Account for Cash Accounts, 0.00,Comments,2023-11-26,mst,2023-04-26, mst
-1000,1002,false,Assets,Cash,Savings Account #12123, 0.00, Comments,2023-11-26,mst,2023-04-26, mst
-1000,1003,false,Assets,Cash,Chequeing Account #12323, 0.00, Comments,2023-11-26,mst,2023-04-26, mst
+1000,1000,TRUE,Asset,LIquid Assets,Cash,0,Comment,2023/4/26,mst,2023/4/26,mst
+1000,1001,FALSE,Asset,Asset,Bank Account - Savings,0,Comment,2023/4/26,mst,2023/4/26,mst
+1000,1002,FALSE,Asset,Asset,Bank Account - Investments,0,Comment,2023/4/26,mst,2023/4/26,mst
+1010,1010,TRUE,Asset,,Accounts Receivable/Prepaid,0,Comment,2023/4/26,mst,2023/4/26,mst
+1010,1011,FALSE,Asset,Asset,Accounts Receivable,0,Comment,2023/4/26,mst,2023/4/26,mst
+1020,1020,TRUE,Asset,,Inventory,0,Comment,2023/4/26,mst,2023/4/26,mst
+1020,1021,FALSE,Asset,Asset,Inventory,0,Comment,2023/4/26,mst,2023/4/26,mst
+1030,1030,TRUE,Asset,,Prepaid Expenses,0,Comment,2023/4/26,mst,2023/4/26,mst
+1030,1031,FALSE,Asset,Asset,Prepaid Expenses,0,Comment,2023/4/26,mst,2023/4/26,mst
+2000,2000,TRUE,Asset,Asset,Capital Assets,0,Comment,2023/4/26,mst,2023/4/26,mst
+2000,2010,FALSE,Asset,Asset,Capital asset depreciation,0,Comment,2023/4/26,mst,2023/4/26,mst
+2000,2020,FALSE,Asset,Asset,Capital asset depreciation,0,Comment,2023/4/26,mst,2023/4/26,mst
+3000,3000,TRUE,Liability,Liability,Accounts Payable / Accrued liabilities,0,Comment,2023/4/26,mst,2023/4/26,mst
+3000,3010,FALSE,Liability,Liability,Accounts Payable,0,Comment,2023/4/26,mst,2023/4/26,mst
+3000,3020,FALSE,Liability,Liability,Accrued Liabilities,0,Comment,2023/4/26,mst,2023/4/26,mst
+4000,4000,TRUE,Liability,Liability,Funds,0,Comment,2023/4/26,mst,2023/4/26,mst
+4000,4001,FALSE,Equity / Net Assets,Equity / Net Assets,Transfer from Operating Fund,0,Comment,2023/4/26,mst,2023/4/26,mst
+4000,4002,FALSE,Equity / Net Assets,Equity / Net Assets,Transfer to Operating Fund,0,Comment,2023/4/26,mst,2023/4/26,mst
+4000,4010,FALSE,Equity / Net Assets,Equity / Net Assets,Reserve Fund,0,Comment,2023/4/26,mst,2023/4/26,mst
+4000,4011,FALSE,Equity / Net Assets,Equity / Net Assets,Transfer from Reserve Fund,0,Comment,2023/4/26,mst,2023/4/26,mst
+4000,4012,FALSE,Equity / Net Assets,Equity / Net Assets,Transfer to Reserve Fund,0,Comment,2023/4/26,mst,2023/4/26,mst
+4000,4020,FALSE,Equity / Net Assets,Equity / Net Assets,Special Assessment Fund,0,Comment,2023/4/26,mst,2023/4/26,mst
+4000,4021,FALSE,Equity / Net Assets,Equity / Net Assets,Transfer from Special Assessment Fund,0,Comment,2023/4/26,mst,2023/4/26,mst
+4000,4022,FALSE,Equity / Net Assets,Equity / Net Assets,Transfer to Special Assessment Fund,0,Comment,2023/4/26,mst,2023/4/26,mst
+4000,4030,FALSE,Equity / Net Assets,Equity / Net Assets,Capital Asset Fund,0,Comment,2023/4/26,mst,2023/4/26,mst
+4000,4031,FALSE,Equity / Net Assets,Equity / Net Assets,Transfer from Capital Asset Fund,0,Comment,2023/4/26,mst,2023/4/26,mst
+4000,4032,FALSE,Equity / Net Assets,Equity / Net Assets,Transfer to Capital Asset Fund,0,Comment,2023/4/26,mst,2023/4/26,mst
+5000,5000,TRUE,Revenue,Revenue,Revenue,0,Comment,2023/4/26,mst,2023/4/26,mst
+5000,5010,FALSE,Revenue,Revenue,Condo fee revenue,0,Comment,2023/4/26,mst,2023/4/26,mst
+5000,5020,FALSE,Revenue,Revenue,Reserve Fund Revenue,0,Comment,2023/4/26,mst,2023/4/26,mst
+5000,5030,FALSE,Revenue,Revenue,Interest Revenue,0,Comment,2023/4/26,mst,2023/4/26,mst
+5000,5040,FALSE,Revenue,Revenue,Special Assessment fees,0,Comment,2023/4/26,mst,2023/4/26,mst
+6000,6000,TRUE,Expense,Expense,"Expenses ",0,Comment,2023/4/26,mst,2023/4/26,mst
+6000,6010,FALSE,Expense,Expense,Bank fees,0,Comment,2023/4/26,mst,2023/4/26,mst
+6000,6020,FALSE,Expense,Expense,Interest expense,0,Comment,2023/4/26,mst,2023/4/26,mst
+6000,6030,FALSE,Expense,Expense,"Office ",0,Comment,2023/4/26,mst,2023/4/26,mst
+6000,6040,FALSE,Expense,Expense,Landscaping,0,Comment,2023/4/26,mst,2023/4/26,mst
+6000,6050,FALSE,Expense,Expense,Snow removal,0,Comment,2023/4/26,mst,2023/4/26,mst
+6000,6060,FALSE,Expense,Expense,Water,0,Comment,2023/4/26,mst,2023/4/26,mst
+6000,6070,FALSE,Expense,Expense,Power,0,Comment,2023/4/26,mst,2023/4/26,mst
+6000,6080,FALSE,Expense,Expense,Waste,0,Comment,2023/4/26,mst,2023/4/26,mst
+6000,6090,FALSE,Expense,Expense,Repairs and Maintenance,0,Comment,2023/4/26,mst,2023/4/26,mst
+6000,6100,FALSE,Expense,Expense,Caretaker,0,Comment,2023/4/26,mst,2023/4/26,mst
+6000,6110,FALSE,Expense,Expense,Professional fees - Accounting,0,Comment,2023/4/26,mst,2023/4/26,mst
+6000,6120,FALSE,Expense,Expense,Professional fees - Legal,0,Comment,2023/4/26,mst,2023/4/26,mst
+6000,6130,FALSE,Expense,Expense,Bookkeeping,0,Comment,2023/4/26,mst,2023/4/26,mst
+6000,6140,FALSE,Expense,Expense,Management fees,0,Comment,2023/4/26,mst,2023/4/26,mst
+6000,6150,FALSE,Expense,Expense,Insurance,0,Comment,2023/4/26,mst,2023/4/26,mst
+6000,6160,FALSE,Expense,Expense,Amortization of capital asset,0,Comment,2023/4/26,mst,2023/4/26,mst
