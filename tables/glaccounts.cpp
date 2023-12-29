@@ -1,6 +1,6 @@
 #include "glaccounts.h"
 
-void Transaction::insertTableFromCSV (string table ) {
+int GLAccounts::insertTableFromCSV () {
     pqxx::connection c{"postgresql://mst:1628@localhost/nobleledger"};
     pqxx::work txn{c};
 
@@ -67,16 +67,17 @@ void Transaction::insertTableFromCSV (string table ) {
     result r = txn.exec("SELECT account, child, parent_account from gl_accounts;");
     cout << "Truncated and inserted " << r.size() << " general ledger accounts.\n";
     txn.commit();
+    return r.size();
 }
   
-void Transaction::trunctateTable (string table ) {
+void GLAccounts::trunctateTable () {
     pqxx::connection c{"postgresql://mst:1628@localhost/nobleledger"};
     pqxx::work txn{c};
     txn.exec("TRUNCATE TABLE gl_accounts;");
     txn.commit();
 }
 
-void Transaction::updateAndTruncate() {
-    trunctateTable("gl_accounts");
-    insertTableFromCSV("gl_accounts");
+int GLAccounts::updateAndTruncate() {
+    trunctateTable();
+    return insertTableFromCSV();
 }

@@ -5,11 +5,11 @@
 using namespace std;
 using namespace pqxx;
 
-class Transaction {
+class GLAccounts {
     public:
-        void trunctateTable(string table);
-        void insertTableFromCSV(string table);
-        void updateAndTruncate();
+        void trunctateTable();
+        int insertTableFromCSV();
+        int updateAndTruncate();
     
 };   
 

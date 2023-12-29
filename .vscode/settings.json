@@ -3,6 +3,7 @@
     "gltypes",
     "longopts",
     "nobleledger",
-    "pqxx"
+    "pqxx",
+    "wvalue"
   ]
 }

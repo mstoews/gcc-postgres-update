@@ -7,8 +7,8 @@ using namespace pqxx;
 
 class GLJournalTransactions {
     public:
-        void trunctateTransaction(string table);
-        void insertTransactionsFromCSV(string table);
-        void truncateAndUpdate();    
+        void trunctateTransaction();
+        int insertTransactionsFromCSV();
+        int truncateAndUpdate();    
 };   
 

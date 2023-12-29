@@ -7,9 +7,9 @@ using namespace pqxx;
 
 class GLTypes {
     public:
-        void trunctateTypes(string table);
-        void insertTypesFromCSV(string table);
-        void updateAndTruncate();
+        void trunctateTypes();
+        int insertTypesFromCSV();
+        int updateAndTruncate();
     
 };   
 
