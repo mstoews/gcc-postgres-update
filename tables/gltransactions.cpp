@@ -1,5 +1,21 @@
 #include "gltransactions.h"
 
+int GLJournalTransactions::bookTransaction(int transaction_id){
+    try {
+        pqxx::connection c{"postgresql://mst:1628@localhost/nobleledger"};
+        pqxx::work txn{c};
+        string sql =  "update gl_journal_header set booked = true where journal_id = " +  to_string(transaction_id ) + ";" ;
+        cout << sql << endl;
+        txn.exec(sql);
+        txn.commit();
+        }
+    catch (const std::exception &e) {
+        cout << "ERROR :" << e.what() << endl;    
+        return -1;
+    }
+    return 0;
+}
+
 int GLJournalTransactions::insertTransactionsFromCSV () {
     connection c{"postgresql://mst:1628@localhost/nobleledger"};
     work txn{c};
@@ -7,7 +23,7 @@ int GLJournalTransactions::insertTransactionsFromCSV () {
     ifstream glaccounts;
     glaccounts.open("./data/gl_transaction.csv");
 
-    string insert = "INSERT INTO gl_journal_header (journal_id, description, booked, booked_date,booked_user, create_date, create_user)  VALUES (";
+    string insert = "insert into gl_journal_header (journal_id, description, booked, booked_date,booked_user, create_date, create_user)  VALUES (";
     
     string journal_id;
     string journal_sub_id;
@@ -16,6 +32,7 @@ int GLJournalTransactions::insertTransactionsFromCSV () {
     string description;
     string debit;
     string credit;
+    
     char sqlBuffer[1000];
         
     string line;

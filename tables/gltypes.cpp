@@ -1,6 +1,8 @@
 #include "gltypes.h"
 
 int GLTypes::insertTypesFromCSV ()  {
+    result r;
+    try {
     pqxx::connection c{"postgresql://mst:1628@localhost/nobleledger"};
     pqxx::work txn{c};
 
@@ -44,13 +46,19 @@ int GLTypes::insertTypesFromCSV ()  {
 
         string buffer(sqlBuffer);
         txn.exec(buffer);
+            
     }
 
-    result r = txn.exec("SELECT type from gl_account_type;");
+    r = txn.exec("SELECT type from gl_account_type;");
     cout << "Truncated and inserted " << r.size() << " account types.\n";
     txn.commit();
+    } catch (const std::exception &e) {
+        cout << e.what() << endl;
+    }
     return r.size();
 }
+
+
   
 void GLTypes::trunctateTypes () {
     pqxx::connection c{"postgresql://mst:1628@localhost/nobleledger"};
